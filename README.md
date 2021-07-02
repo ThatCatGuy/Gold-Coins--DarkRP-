@@ -4,7 +4,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2530823851
 This is a nice little addon that allows Gold Coins to be spawned in via the Q Menu and collected by users. There is 4 Convars that can be changed so it can give random amounts of money on collection or a set amount read below.
 
 ## Credits
-<CODE BLUE> https://steamcommunity.com/id/codeblue for original code following one of his fantastic tutorials. May he rest in piece. Thank you for all you gave to the community.
+**CODE BLUE** https://steamcommunity.com/id/codeblue for original code following one of his fantastic tutorials. May he rest in piece. Thank you for all you gave to the community.
 
 ## How to spawn/equip
 Spawn from menu: Open Q Menu go to Entities -> CatGuy Sweps -> Gold Coins
