@@ -7,7 +7,7 @@ This is a nice little addon that allows Gold Coins to be spawned in via the Q Me
 **<CODE BLUE>** https://steamcommunity.com/id/codeblue for original code following one of his fantastic tutorials. May he rest in piece. Thank you for all you gave to the community.
 
 ## How to spawn/equip
-Spawn from menu:** Open Q Menu go to Entities -> CatGuy Sweps -> Gold Coins**
+Spawn from menu: Open Q Menu go to Entities -> CatGuy Sweps -> Gold Coins
 
 ## How to use (Cooldown 2 Seconds)
 By default the amount is **random** between **500** and **2000**.
