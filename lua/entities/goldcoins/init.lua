@@ -7,10 +7,12 @@ CreateConVar( "coin_min_value", 500, FCVAR_SERVER_CAN_EXECUTE )
 CreateConVar( "coin_max_value", 2000, FCVAR_SERVER_CAN_EXECUTE )
 CreateConVar( "coin_random", 1, FCVAR_SERVER_CAN_EXECUTE )
 CreateConVar( "coin_value", 1000, FCVAR_SERVER_CAN_EXECUTE )
+CreateConVar( "coin_despawn_delay", 30, FCVAR_SERVER_CAN_EXECUTE )
 
 local coinmin = GetConVar( "coin_min_value" )
 local coinmax = GetConVar( "coin_max_value" )
 local coinvalue = GetConVar( "coin_value" )
+local coin_despawn_delay = GetConVar( "coin_despawn_delay" )
 
 function ENT:Initialize()
 	self:SetModel("models/hunter/blocks/cube025x025x025.mdl")
@@ -21,6 +23,9 @@ function ENT:Initialize()
 	self:SetCollisionGroup(COLLISION_GROUP_WEAPON)
 	self:SetTrigger(true)
 	self:DrawShadow(false)
+	timer.Create("GoldCoin" .. self:EntIndex(), coin_despawn_delay:GetInt(), 1, function()
+		self:Remove()
+	end)
 end
 
 function ENT:StartTouch(ply)
@@ -33,4 +38,10 @@ function ENT:StartTouch(ply)
 		ply:addMoney(moneyrandom)
 		self:Remove()
 	end
+end
+
+function ENT:OnRemove()
+  if timer.Exists("GoldCoin" .. self:EntIndex()) then
+    timer.Remove("GoldCoin" .. self:EntIndex())
+  end
 end
